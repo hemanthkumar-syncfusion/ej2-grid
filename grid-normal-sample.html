@@ -19,7 +19,7 @@
 <script >
 
     var grid = new ej.grids.Grid({
-    dataSource: data,
+    dataSource: data.slice(0, 20),
     height: 400,
     columns: [
             { field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID' },
