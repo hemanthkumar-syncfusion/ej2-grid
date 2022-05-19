@@ -21,7 +21,6 @@
     var grid = new ej.grids.Grid({
     dataSource: data.slice(0, 20),
     height: 400,
-    allowResizing: true,
     allowSorting: true,
     allowGrouping: true,
     allowFiltering: true,
@@ -35,6 +34,11 @@
     childGrid: {
         dataSource: purchaseData,
         queryString: 'CustomerID',
+        allowSorting: true,
+        allowGrouping: true,
+        allowFiltering: true,
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+        editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
         columns: [
             { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
             { field: 'ShipCity', headerText: 'Ship City', width: 150 },
