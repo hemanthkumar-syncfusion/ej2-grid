@@ -27,7 +27,9 @@
             { field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID' },
             { field: 'CustomerID', headerText: 'CustomerID' },
             { field: 'EmployeeID', headerText: 'Employee ID' },
+            { field: 'OrderDate', headerText: 'Order Date', type: 'date', width: 120, format: { type:'date', format:'dd.MM.yyyy' } ,editType: 'datepickeredit', edit: { params: { format:'dd.MM.yy' }  } },
             { field: "ShipCity", headerText: "Ship City", width: 250 },
+            { field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150}
     ],
 });
 grid.appendTo('#Grid');
