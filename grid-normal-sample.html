@@ -18,26 +18,10 @@
 
 <script >
 
-    for (var i = 0; i < data.length; i++) {
-        data[i]["List"] = i+1;
-    }
-    
     var grid = new ej.grids.Grid({
     dataSource: data,
-    selectionSettings: { persistSelection: true },
-    allowGrouping: true,
-    allowSorting: true,
-    allowFiltering: true,
-    filterSettings: { type: 'CheckBox' },
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal', newRowPosition:'Top' },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel','Search'],
     height: 400,
-    rowDataBound: function (args) {
-        args.isSelectable = args.data.List % 3 === 0;
-    },
     columns: [
-            { type: "checkbox", width: 50 },
-            { field: 'List',  headerText: 'List' },
             { field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID' },
             { field: 'CustomerID', headerText: 'CustomerID' },
             { field: 'EmployeeID', headerText: 'Employee ID' },
